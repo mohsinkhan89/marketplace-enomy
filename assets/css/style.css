@@ -953,171 +953,86 @@ img {
   background-color: var(--primary-light);
 }
 
-/* Phone Mockup */
+/* Phone Mockup Image Positioning */
 .phone-mockup-container {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-.phone-frame {
-  width: 250px;
-  height: 420px;
-  background-color: #0d072b;
-  border-radius: 36px 36px 0 0;
-  padding: 10px 10px 0 10px;
-  box-shadow: 0 20px 40px rgba(13, 7, 43, 0.15);
-  border: 4px solid #0d072b;
-  border-bottom: none;
-}
-.phone-screen {
-  width: 100%;
+  align-items: flex-end;
   height: 100%;
-  background-color: #f0f2f5;
-  border-radius: 28px 28px 0 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-/* Chat App Interface inside phone */
-.chat-header {
-  background-color: #075e54;
-  color: #ffffff;
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.chat-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #e2e8f0;
-  overflow: hidden;
-}
-.chat-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.chat-user-info {
-  display: flex;
-  flex-direction: column;
-}
-.chat-user-name {
-  font-size: 11px;
-  font-weight: 700;
-}
-.chat-user-status {
-  font-size: 8px;
-  opacity: 0.8;
-}
-.chat-body {
-  flex: 1;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.chat-bubble {
-  max-width: 80%;
-  padding: 8px 10px;
-  border-radius: 8px;
-  font-size: 10px;
-  line-height: 1.4;
   position: relative;
 }
-.chat-bubble.incoming {
-  background-color: #ffffff;
-  align-self: flex-start;
-  border-top-left-radius: 0;
-}
-.chat-bubble.outgoing {
-  background-color: #d9fdd3;
-  align-self: flex-end;
-  border-top-right-radius: 0;
-}
-.chat-time {
-  font-size: 7px;
-  color: var(--text-light);
-  text-align: right;
-  margin-top: 2px;
+.app-phone-img {
+  max-width: 250px;
+  height: auto;
+  margin-bottom: -15px; /* extends slightly below the banner card boundary */
   display: block;
 }
 
-/* App Right */
+/* App Right Column Layout */
 .app-right {
   padding-bottom: 60px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
+  align-items: flex-start; /* aligns to the left in the right column */
+  gap: 24px;
 }
 .app-right h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
-  color: var(--text-dark);
-}
-.store-badges {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  max-width: 180px;
-}
-.store-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #0d072b;
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 8px;
-  text-align: left;
-  transition: var(--transition);
-}
-.store-btn:hover {
-  background-color: #1e154f;
-}
-.store-btn svg {
-  width: 24px;
-  height: 24px;
-  fill: #ffffff;
-}
-.store-btn-text span {
-  display: block;
-  font-size: 8px;
-  text-transform: uppercase;
-  color: var(--text-light);
-}
-.store-btn-text strong {
-  display: block;
-  font-size: 12px;
-  font-weight: 700;
+  color: #1e1b4b; /* deep indigo */
+  margin-bottom: -4px;
 }
 
-.barcode-box {
+.store-badges-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.store-badge-img-btn {
+  display: block;
+  transition: var(--transition);
+}
+.store-badge-img-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+.store-badge-img-btn img {
+  height: 40px;
+  width: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.barcode-card {
   background-color: #ffffff;
   border: 1px solid var(--border);
-  padding: 12px;
-  border-radius: 12px;
+  padding: 14px 18px;
+  border-radius: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   box-shadow: var(--shadow-sm);
+  width: 100%;
+  max-width: 240px;
 }
-.barcode-box svg {
-  width: 140px;
-  height: 40px;
+.barcode-card img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  max-height: 45px;
+  object-fit: contain;
 }
-.barcode-box span {
-  font-size: 8px;
-  font-weight: 700;
+.barcode-card span {
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--text-dark);
   text-transform: uppercase;
-  color: var(--text-muted);
   letter-spacing: 1px;
 }
+
 
 /* Footer Section */
 .footer-wrapper {
