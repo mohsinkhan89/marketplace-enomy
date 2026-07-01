@@ -57,12 +57,51 @@
 
       <!-- Secondary Nav links -->
       <nav class="secondary-nav">
-        <button class="btn-categories" id="menu-categories-toggle">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <span>Categories</span>
-        </button>
+        <div class="categories-menu">
+          <button class="btn-categories" id="menu-categories-toggle" aria-expanded="false" aria-controls="header-categories-menu">
+            <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <span>Categories</span>
+            <svg class="chevron-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="categories-dropdown" id="header-categories-menu">
+            <a href="#section-products" class="category-menu-item">
+              <span class="category-menu-icon">W</span>
+              <span>Women's Fashion</span>
+            </a>
+            <a href="#section-products" class="category-menu-item">
+              <span class="category-menu-icon">M</span>
+              <span>Men's Fashion</span>
+            </a>
+            <a href="#section-products" class="category-menu-item">
+              <span class="category-menu-icon">E</span>
+              <span>Electronics</span>
+            </a>
+            <a href="#section-products" class="category-menu-item">
+              <span class="category-menu-icon">P</span>
+              <span>Phones & Tablets</span>
+            </a>
+            <a href="#section-products" class="category-menu-item">
+              <span class="category-menu-icon">H</span>
+              <span>Home & Living</span>
+            </a>
+            <a href="#section-products" class="category-menu-item">
+              <span class="category-menu-icon">B</span>
+              <span>Beauty & Health</span>
+            </a>
+            <a href="#section-products" class="category-menu-item">
+              <span class="category-menu-icon">S</span>
+              <span>Sports & Outdoors</span>
+            </a>
+            <a href="#section-products" class="category-menu-item">
+              <span class="category-menu-icon">F</span>
+              <span>Food & Groceries</span>
+            </a>
+          </div>
+        </div>
         <ul class="nav-links">
           <li><a href="#section-products" id="link-all-products">All products</a></li>
           <li><a href="#section-vendors" id="link-vendors">Vendors</a></li>

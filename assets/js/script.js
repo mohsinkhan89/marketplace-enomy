@@ -85,10 +85,35 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 6. Categories menu toggle
+  const categoriesMenu = document.querySelector('.categories-menu');
   const catBtn = document.querySelector('.btn-categories');
-  if (catBtn) {
-    catBtn.addEventListener('click', () => {
-      alert('Categories list: Women\'s Fashion, Men\'s Fashion, Electronics, Phones & Tablets, Home & Living, Beauty & Health, Sports & Outdoors, Cars, Food & Groceries, Books & Movies');
+
+  if (categoriesMenu && catBtn) {
+    const closeCategoriesMenu = () => {
+      categoriesMenu.classList.remove('open');
+      catBtn.setAttribute('aria-expanded', 'false');
+    };
+
+    catBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = categoriesMenu.classList.toggle('open');
+      catBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    categoriesMenu.querySelectorAll('.category-menu-item').forEach(item => {
+      item.addEventListener('click', closeCategoriesMenu);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!categoriesMenu.contains(e.target)) {
+        closeCategoriesMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCategoriesMenu();
+      }
     });
   }
 
