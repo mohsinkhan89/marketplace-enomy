@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enomy - Africa's Product Discovery Marketplace</title>
+  <meta name="description" content="Discover products from trusted local sellers near you. Compare options and chat directly on WhatsApp. No middlemen, no marketplace checkout.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header-wrapper">
+    <div class="container">
+      <div class="top-nav">
+        <!-- Logo -->
+        <a href="#" class="logo-container" id="nav-logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm1.75-2.24h8.5c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.33-.25.7-.25 1.1 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25z"/>
+          </svg>
+          <span>enomy</span>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input type="text" placeholder="Search products, brands or categories..." id="top-search-input">
+        </div>
+
+        <!-- Country Selector -->
+        <div class="country-selector" id="country-select">
+          <svg width="20" height="15" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg" style="border-radius: 2px;">
+            <rect width="1" height="2" fill="#008751"/>
+            <rect x="1" width="1" height="2" fill="#fff"/>
+            <rect x="2" width="1" height="2" fill="#008751"/>
+          </svg>
+          <span>Nigeria</span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 12px; height: 12px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </div>
+
+        <!-- Vendor Live Status Indicator -->
+        <div class="vendor-stats">
+          <span class="dot"></span>
+          <span><strong>5,297+</strong> vendors online now</span>
+        </div>
+
+        <!-- Action Button -->
+        <button class="btn-become-vendor" id="header-become-vendor">Become a vendor</button>
+      </div>
+
+      <!-- Secondary Nav links -->
+      <nav class="secondary-nav">
+        <button class="btn-categories" id="menu-categories-toggle">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <span>Categories</span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#section-products" id="link-all-products">All products</a></li>
+          <li><a href="#section-vendors" id="link-vendors">Vendors</a></li>
+          <li><a href="#section-products" id="link-deals">Deals</a></li>
+          <li><a href="#section-how-it-works" id="link-how-it-works">How it works</a></li>
+          <li><a href="#section-vendors" id="link-success-stories">Success stories</a></li>
+          <li><a href="#section-help" id="link-help">Help</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <!-- Hero Left Info -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <span>Africa's Product Discovery Marketplace</span>
+          </div>
+          <h1>Discover products from trusted local sellers near you</h1>
+          <p>Find products from local vendors, compare options, and chat directly on WhatsApp. No middlemen, no marketplace checkout.</p>
+          
+          <!-- Search box inside Hero -->
+          <div class="hero-search">
+            <input type="text" placeholder="What are you looking for?" id="hero-search-input">
+            <button id="hero-search-btn">Explore</button>
+          </div>
+
+          <!-- Discover quick tags -->
+          <div class="discover-tags-wrapper">
+            <div class="discover-label">Discover</div>
+            <div class="discover-tags">
+              <button class="tag-btn" id="tag-womens-fashion">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+                </svg>
+                <span>Women's fashion</span>
+              </button>
+              <button class="tag-btn" id="tag-mens-fashion">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.813 15.904L9 21m0 0l-.813-5.096m.813 5.096h6m-6 0h-6m13.813-5.096L15 21m0 0l.813-5.096m-.813 5.096h-6m6 0h6M12 3a9 9 0 00-9 9m9-9a9 9 0 019 9m-9-9v9m0 0v9m0-9H3m9 0h9"></path>
+                </svg>
+                <span>Men's Fashion</span>
+              </button>
+              <button class="tag-btn" id="tag-electronics">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <span>Electronics</span>
+              </button>
+              <button class="tag-btn" id="tag-movies">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                </svg>
+                <span>Movies, books & music</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bottom checkmarks -->
+          <div class="hero-benefits">
+            <div class="benefit-item">
+              <div class="benefit-icon-box">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <div class="benefit-text">
+                <h4>Verified Vendor</h4>
+                <p>Trusted local sellers</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon-box">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div class="benefit-text">
+                <h4>15 min avg. response</h4>
+                <p>Fast & reliable replies</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon-box whatsapp-bg">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </div>
+              <div class="benefit-text">
+                <h4>Chat on WhatsApp</h4>
+                <p>Direct, secure & easy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Visual -->
+        <div class="hero-visual">
+          <div class="hero-woman-wrapper">
+            <img src="assets/images/hero-woman.png" alt="African woman discovering local sellers near her">
+          </div>
+
+          <!-- Floating card 1: Perfume -->
+          <div class="float-card fc-1">
+            <div class="float-img-box">
+              <img src="assets/images/product-dior.png" alt="Dior Perfume">
+            </div>
+            <div class="float-info">
+              <div class="float-loc">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                <span>0.9km</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating card 2: Sneakers -->
+          <div class="float-card fc-2">
+            <div class="float-img-box">
+              <img src="assets/images/product-nike.png" alt="Nike Sneakers">
+            </div>
+            <div class="float-info">
+              <div class="float-loc">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                <span>1.7km</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating card 3: iPhone -->
+          <div class="float-card fc-3">
+            <div class="float-img-box">
+              <img src="assets/images/product-iphone.png" alt="iPhone 14">
+            </div>
+            <div class="float-info">
+              <div class="float-loc">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                <span>12.5km</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating card 4: Headphones -->
+          <div class="float-card fc-4">
+            <div class="float-img-box">
+              <img src="assets/images/product-headphones.png" alt="Headphones">
+            </div>
+            <div class="float-info">
+              <div class="float-loc">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                <span>2.5km</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating card 5: Armchair -->
+          <div class="float-card fc-5">
+            <div class="float-img-box">
+              <img src="assets/images/product-armchair.png" alt="Armchair">
+            </div>
+            <div class="float-info">
+              <div class="float-loc">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                <span>3.4km</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating card 6: Cosmetics -->
+          <div class="float-card fc-6">
+            <div class="float-img-box">
+              <img src="assets/images/product-cosmetics.png" alt="Cosmetics Jar">
+            </div>
+            <div class="float-info">
+              <div class="float-loc">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                <span>4.4km</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating card 7: Handbag -->
+          <div class="float-card fc-7">
+            <div class="float-img-box">
+              <img src="assets/images/product-gucci.png" alt="Gucci Handbag">
+            </div>
+            <div class="float-info">
+              <div class="float-loc">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                <span>5.2km</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating card 8: Food Bowl -->
+          <div class="float-card fc-8">
+            <div class="float-img-box">
+              <img src="assets/images/product-food.png" alt="Food Bowl">
+            </div>
+            <div class="float-info">
+              <div class="float-loc">
+                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                <span>1.2km</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Buying Works -->
+    <section class="buying-works" id="section-how-it-works">
+      <div class="container">
+        <div class="section-divider">
+          <div class="line"></div>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;">
+            <path d="M17 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm1.75-2.24h8.5c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.33-.25.7-.25 1.1 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25z"/>
+          </svg>
+          <div class="line"></div>
+        </div>
+        <h2 class="section-title-alt">How Buying Works</h2>
+
+        <div class="works-grid">
+          <!-- Step 1 -->
+          <div class="work-card">
+            <div class="work-number">1</div>
+            <div class="work-icon-container">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+            <h3>Discover products</h3>
+            <p>Find amazing items from trusted local sellers near you.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="work-card" style="cursor: pointer;">
+            <div class="work-number">2</div>
+            <div class="work-icon-container">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </div>
+            <h3>Chat on WhatsApp</h3>
+            <p>Message the seller directly for details, price & photos.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="work-card">
+            <div class="work-number">3</div>
+            <div class="work-icon-container">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
+            </div>
+            <h3>Buy from a local seller</h3>
+            <p>Agree on terms and buy locally. Simple and secure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recently Added Section -->
+    <section class="products-section" id="section-products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Recently added by nearby sellers</h2>
+          <a href="#" class="view-all-link" id="btn-view-all-products">
+            <span>View all products</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="product-grid">
+          <!-- Card 1: Gucci Marmont -->
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img src="assets/images/product-gucci.png" alt="Gucci Marmont Shoulder Bag">
+              <span class="product-tag">Nearby</span>
+              <span class="product-distance">1.5 KM</span>
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Gucci Marmont Shoulder Bag</h3>
+              <div class="product-location">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span>Lekki Phase 1, Lagos</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₦285,000</span>
+                <div class="btn-whatsapp-chat">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: iPhone 14 Pro Max -->
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img src="assets/images/product-iphone.png" alt="iPhone 14 Pro Max 256GB">
+              <span class="product-tag">Nearby</span>
+              <span class="product-distance">2.1 KM</span>
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">iPhone 14 Pro Max 256GB</h3>
+              <div class="product-location">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span>Wuse 2, Abuja</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₦860,000</span>
+                <div class="btn-whatsapp-chat">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Nike Air Jordan -->
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img src="assets/images/product-nike.png" alt="Nike Air Jordan 1 Retro High">
+              <span class="product-tag">Nearby</span>
+              <span class="product-distance">0.9 KM</span>
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Nike Air Jordan 1 Retro High</h3>
+              <div class="product-location">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span>Ikeja, Lagos</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₦165,000</span>
+                <div class="btn-whatsapp-chat">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Dior Sauvage -->
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img src="assets/images/product-dior.png" alt="Dior Sauvage EDP 100ml">
+              <span class="product-tag">Nearby</span>
+              <span class="product-distance">1.8 KM</span>
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Dior Sauvage EDP 100ml</h3>
+              <div class="product-location">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span>Victoria Island, Lagos</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₦95,000</span>
+                <div class="btn-whatsapp-chat">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Apple Watch -->
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img src="assets/images/product-applewatch.png" alt="Apple Watch Series 9 45mm">
+              <span class="product-tag">Nearby</span>
+              <span class="product-distance">2.4 KM</span>
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Apple Watch Series 9 45mm</h3>
+              <div class="product-location">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span>Gwarinpa, Abuja</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₦320,000</span>
+                <div class="btn-whatsapp-chat">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Huda Beauty eyeshadow -->
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img src="assets/images/product-hudabeauty.png" alt="Huda Beauty Eyeshadow">
+              <span class="product-tag">Nearby</span>
+              <span class="product-distance">2.4 KM</span>
+            </div>
+            <div class="product-details">
+              <h3 class="product-name">Huda Beauty Eyeshadow</h3>
+              <div class="product-location">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span>Yaba, Lagos</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₦28,000</span>
+                <div class="btn-whatsapp-chat">
+                  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop by Category Section -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Shop by category</h2>
+          <div class="slider-controls">
+            <button class="btn-slide prev" id="slider-prev">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="btn-slide next" id="slider-next">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="categories-container" id="category-slider">
+          <!-- Women's Fashion -->
+          <div class="category-card" id="cat-womens">
+            <div class="category-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+              </svg>
+            </div>
+            <span>Women's<br>Fashion</span>
+          </div>
+
+          <!-- Men's Fashion -->
+          <div class="category-card" id="cat-mens">
+            <div class="category-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.813 15.904L9 21m0 0l-.813-5.096m.813 5.096h6m-6 0h-6m13.813-5.096L15 21m0 0l.813-5.096m-.813 5.096h-6m6 0h6M12 3a9 9 0 00-9 9m9-9a9 9 0 019 9m-9-9v9m0 0v9m0-9H3m9 0h9"></path>
+              </svg>
+            </div>
+            <span>Men's<br>Fashion</span>
+          </div>
+
+          <!-- Electronics -->
+          <div class="category-card" id="cat-electronics">
+            <div class="category-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <span>Electronics</span>
+          </div>
+
+          <!-- Phones & Tablets -->
+          <div class="category-card" id="cat-phones">
+            <div class="category-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <span>Phones &<br>Tablets</span>
+          </div>
+
+          <!-- Home & Living -->
+          <div class="category-card" id="cat-home">
+            <div class="category-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+            <span>Home &<br>Living</span>
+          </div>
+
+          <!-- Beauty & Health -->
+          <div class="category-card" id="cat-beauty">
+            <div class="category-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z"></path>
+              </svg>
+            </div>
+            <span>Beauty &<br>Health</span>
+          </div>
+
+          <!-- Sports & Outdoors -->
+          <div class="category-card" id="cat-sports">
+            <div class="category-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2a2.5 2.5 0 002.5-2.5V8a2 2 0 00-2-2h-3.172a2 2 0 01-1.414-.586l-.828-.828A2 2 0 009.172 4H6.828a2 2 0 00-1.414.586l-.478.479M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <span>Sports &<br>Outdoors</span>
+          </div>
+
+          <!-- Cars & Accessories -->
+          <div class="category-card" id="cat-cars">
+            <div class="category-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              </svg>
+            </div>
+            <span>Cars &<br>Accessories</span>
+          </div>
+
+          <!-- Food & Groceries -->
+          <div class="category-card" id="cat-food">
+            <div class="category-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <span>Food &<br>Groceries</span>
+          </div>
+
+          <!-- Books, Movies & Music -->
+          <div class="category-card" id="cat-books">
+            <div class="category-icon-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <span>Books, Movies<br>& Music</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App / Sell Section -->
+    <section class="app-section" id="section-vendors">
+      <div class="container">
+        <div class="app-banner">
+          <!-- Left Col -->
+          <div class="app-left">
+            <h2>Sell your items on Enomy.</h2>
+            <p>Join thousands of vendors and reach more buyers in your area.</p>
+            <div class="app-left-buttons">
+              <button class="btn-become-vendor" id="app-become-vendor">Become a vendor</button>
+              <button class="btn-outline-primary" id="app-learn-more">Learn more</button>
+            </div>
+          </div>
+
+          <!-- Center Col (Interactive Phone Mockup) -->
+          <div class="phone-mockup-container">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="chat-header">
+                  <div class="chat-avatar">
+                    <img src="assets/images/hero-woman.png" alt="Enomy Vendor Profile">
+                  </div>
+                  <div class="chat-user-info">
+                    <span class="chat-user-name">Enomy Vendor</span>
+                    <span class="chat-user-status">online</span>
+                  </div>
+                </div>
+                <div class="chat-body">
+                  <div class="chat-bubble incoming">
+                    Hello! I'm interested in the iPhone 14 Pro Max.
+                    <span class="chat-time">10:18 AM</span>
+                  </div>
+                  <div class="chat-bubble outgoing">
+                    Hi! It's available. Would you like more details?
+                    <span class="chat-time">10:19 AM</span>
+                  </div>
+                  <div class="chat-bubble incoming">
+                    Yes please, kindly share photos and price.
+                    <span class="chat-time">10:21 AM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Col -->
+          <div class="app-right">
+            <h3>Get the Enomy Vendor App</h3>
+            <div class="store-badges">
+              <!-- Google Play -->
+              <a href="#" class="store-btn" id="btn-playstore">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 3.14v17.72c0 .41.24.78.62.96l9.64-9.64-9.64-9.64A1.08 1.08 0 0 0 5 3.14zm11.03 8.86l2.36-2.36-2.36-2.36L15.1 8.21 16.03 12zm2.97-.93l2.45-1.42c.44-.25.59-.81.34-1.25a.96.96 0 0 0-.34-.34l-2.45-1.42-1.92 1.92 1.92 2.51zm-4-4.86l1.79-1.04-7.85-7.85c-.38-.38-1-.38-1.38 0a.96.96 0 0 0-.27.69v5.69l7.71 2.51z"/>
+                </svg>
+                <div class="store-btn-text">
+                  <span>GET IT ON</span>
+                  <strong>Google Play</strong>
+                </div>
+              </a>
+
+              <!-- App Store -->
+              <a href="#" class="store-btn" id="btn-appstore">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.2.67-2.92 1.51-.62.73-1.16 1.87-1.01 2.98 1.1.09 2.22-.57 2.94-1.43z"/>
+                </svg>
+                <div class="store-btn-text">
+                  <span>Download on the</span>
+                  <strong>App Store</strong>
+                </div>
+              </a>
+            </div>
+
+            <!-- Crisp styled vector Barcode box -->
+            <div class="barcode-box">
+              <svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                <!-- Barcode SVG rendering -->
+                <rect x="0" y="0" width="4" height="40" fill="#0d072b"/>
+                <rect x="6" y="0" width="2" height="40" fill="#0d072b"/>
+                <rect x="10" y="0" width="6" height="40" fill="#0d072b"/>
+                <rect x="18" y="0" width="1" height="40" fill="#0d072b"/>
+                <rect x="22" y="0" width="4" height="40" fill="#0d072b"/>
+                <rect x="28" y="0" width="2" height="40" fill="#0d072b"/>
+                <rect x="34" y="0" width="8" height="40" fill="#0d072b"/>
+                <rect x="44" y="0" width="2" height="40" fill="#0d072b"/>
+                <rect x="48" y="0" width="1" height="40" fill="#0d072b"/>
+                <rect x="52" y="0" width="6" height="40" fill="#0d072b"/>
+                <rect x="60" y="0" width="3" height="40" fill="#0d072b"/>
+                <rect x="66" y="0" width="1" height="40" fill="#0d072b"/>
+                <rect x="70" y="0" width="4" height="40" fill="#0d072b"/>
+                <rect x="76" y="0" width="2" height="40" fill="#0d072b"/>
+                <rect x="80" y="0" width="6" height="40" fill="#0d072b"/>
+                <rect x="88" y="0" width="1" height="40" fill="#0d072b"/>
+                <rect x="92" y="0" width="4" height="40" fill="#0d072b"/>
+                <rect x="98" y="0" width="2" height="40" fill="#0d072b"/>
+                <rect x="104" y="0" width="8" height="40" fill="#0d072b"/>
+                <rect x="114" y="0" width="2" height="40" fill="#0d072b"/>
+                <rect x="118" y="0" width="2" height="40" fill="#0d072b"/>
+              </svg>
+              <span>Scan to download</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer-wrapper" id="section-help">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Logo & Description column -->
+        <div class="footer-brand-col">
+          <a href="#" class="footer-logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 18c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm1.75-2.24h8.5c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.33-.25.7-.25 1.1 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25z"/>
+            </svg>
+            <span>enomy</span>
+          </a>
+          <p class="footer-desc">Africa's product discovery marketplace. Discover local products. Chat directly. Buy with confidence.</p>
+          <!-- Social Icons -->
+          <div class="social-links">
+            <!-- FB -->
+            <a href="#" class="social-btn" id="social-fb">
+              <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 8H7v3h2v9h3v-9h3.6l.4-3H12V6c0-.9.2-1.2 1-1.2H15V2h-3c-3 0-3 2.2-3 4v2z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#" class="social-btn" id="social-ig">
+              <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <!-- Twitter / X -->
+            <a href="#" class="social-btn" id="social-x">
+              <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#" class="social-btn" id="social-tiktok">
+              <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.032 2.61-.008 3.91-.012.08 1.543.837 2.923 2.052 3.753.864.55 1.868.854 2.898.887V8.56c-.958-.065-1.9-.387-2.73-.872-.733-.42-1.35-.99-1.815-1.686v6.4c.068 3.513-2.222 6.772-5.638 7.625-3.32.937-7.01-.734-8.384-3.86-1.572-3.385.074-7.738 3.65-8.913.89-.313 1.84-.42 2.774-.326V11.1c-.815-.178-1.68-.07-2.433.284-1.58.706-2.41 2.59-1.902 4.256.452 1.623 2.11 2.695 3.782 2.484 1.66-.126 3.018-1.545 3.018-3.218V.02z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop Column -->
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="foot-shop-all">All products</a></li>
+            <li><a href="#" id="foot-shop-categories">Categories</a></li>
+            <li><a href="#" id="foot-shop-deals">Deals</a></li>
+            <li><a href="#" id="foot-shop-popular">Popular searches</a></li>
+          </ul>
+        </div>
+
+        <!-- For buyers Column -->
+        <div class="footer-col">
+          <h4>For buyers</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="foot-buyer-how">How it works</a></li>
+            <li><a href="#" id="foot-buyer-safety">Safety tips</a></li>
+            <li><a href="#" id="foot-buyer-help">Help center</a></li>
+            <li><a href="#" id="foot-buyer-contact">Contact us</a></li>
+          </ul>
+        </div>
+
+        <!-- For vendors Column -->
+        <div class="footer-col">
+          <h4>For vendors</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="foot-vendor-become">Become a vendor</a></li>
+            <li><a href="#" id="foot-vendor-guide">Vendor guide</a></li>
+            <li><a href="#" id="foot-vendor-success">Success stories</a></li>
+            <li><a href="#" id="foot-vendor-app">Vendor app</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#" id="foot-comp-about">About Enomy</a></li>
+            <li><a href="#" id="foot-comp-blog">Blog</a></li>
+            <li><a href="#" id="foot-comp-careers">Careers</a></li>
+            <li><a href="#" id="foot-comp-privacy">Privacy policy</a></li>
+            <li><a href="#" id="foot-comp-terms">Terms of use</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-col footer-newsletter-col">
+          <h4>Stay updated</h4>
+          <p class="newsletter-desc">Get product updates, deals and vendor tips straight to your inbox.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email" id="newsletter-email">
+            <button class="btn-subscribe" id="newsletter-subscribe-btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom copyright -->
+      <div class="footer-bottom">
+        <span>© 2025 Enomy. All rights reserved.</span>
+        <div class="footer-bottom-right">
+          <span>Made with</span>
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          <span>in Nigeria</span>
+          <svg width="16" height="11" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg" style="border-radius: 1px; margin-left: 2px;">
+            <rect width="1" height="2" fill="#008751"/>
+            <rect x="1" width="1" height="2" fill="#fff"/>
+            <rect x="2" width="1" height="2" fill="#008751"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
