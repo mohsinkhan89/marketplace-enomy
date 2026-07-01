@@ -444,14 +444,16 @@ img {
   gap: 12px;
   padding-top: 0;
   border-top: none;
-  width: 100%;
+  width: 550px;
+  position: absolute;
+  bottom: 25px;
 }
 
 .benefit-item {
   background-color: #ffffff;
   border: 1px solid rgba(95, 58, 252, 0.05);
   box-shadow: 0 10px 25px rgba(95, 58, 252, 0.03);
-  padding: 12px 14px;
+  padding: 10px 8px;
   border-radius: 7px;
   display: flex;
   align-items: center;
@@ -560,7 +562,7 @@ img {
 .float-card {
   position: absolute;
   background: #ffffff;
-  padding: 6px;
+  /* padding: 6px 0px; */
   border-radius: 8px;
   box-shadow: 0 16px 30px rgba(30, 17, 89, 0.12);
   display: flex;
@@ -582,7 +584,7 @@ img {
 
 .float-img-box {
   width: 100%;
-  height: 80px;
+  height: 90px;
   border-radius: 6px;
   overflow: hidden;
   background-color: #ffffff;
@@ -624,29 +626,29 @@ img {
 
 /* Specific Positions & Rotations (using CSS Custom Properties to preserve rotation during bobbing animation) */
 .fc-1 {
-  top: 164px;
-  left: 108px;
+  top: 140px;
+  left: 90px;
   --rotation: -12deg;
   animation-delay: 0s;
 } /* Perfume (0.9km) */
 
 .fc-2 {
-  top: 34px;
+  top: -10px;
   left: 228px;
   --rotation: 10deg;
   animation-delay: 0.8s;
 } /* Apple Watch (1.7km) */
 
 .fc-3 {
-  top: 48px;
-  right: 86px;
+  top: -10px;
+  right: 145px;
   --rotation: -8deg;
   animation-delay: 1.6s;
 } /* iPhone (12.1km) */
 
 .fc-4 {
   top: 304px;
-  left: 160px;
+  left: 80px;
   --rotation: 8deg;
   animation-delay: 2.4s;
 } /* Headphones (2.3km) */
@@ -659,22 +661,22 @@ img {
 } /* Armchair (3.8km) */
 
 .fc-6 {
-  bottom: 42px;
-  left: 242px;
+  bottom: -20px;
+  left: 130px;
   --rotation: -10deg;
   animation-delay: 4s;
 } /* Cosmetics (4.4km) */
 
 .fc-7 {
   top: 310px;
-  right: 64px;
+  right: 50px;
   --rotation: -8deg;
   animation-delay: 4.8s;
 } /* Handbag (5.2km) */
 
 .fc-8 {
-  bottom: 54px;
-  right: 146px;
+  bottom: -10px;
+  right: 100px;
   --rotation: 8deg;
   animation-delay: 5.6s;
 } /* Food bowl (1.2km) */
